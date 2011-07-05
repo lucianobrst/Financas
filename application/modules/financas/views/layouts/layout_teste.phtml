@@ -1,0 +1,19 @@
+<?php echo $this->doctype(); ?>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <?php echo $this->headMeta(); ?>
+        <?php echo $this->headTitle(); ?>
+        <?php echo $this->headLink() ->prependStylesheet($this->baseUrl('/styles/main.css')); ?>
+        <?php echo $this->headScript()	->appendFile($this->baseUrl(). '/js/jquery-1.6.min.js') ?>
+    </head>
+     
+<body>
+	<div id="navbar"><h1>Nome da Empresa</h1></div>
+	
+
+    <div id="conteiner"><?php echo $this->layout()->content; ?></div>
+
+
+</body>
+
+</html>

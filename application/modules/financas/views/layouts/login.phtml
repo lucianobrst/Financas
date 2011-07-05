@@ -1,0 +1,40 @@
+<?php echo $this->doctype(); ?>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <?php echo $this->headMeta(); ?>
+        <?php echo $this->headTitle(); ?>
+
+        <?php
+        echo $this->headLink()
+                ->prependStylesheet($this->baseUrl("/styles/style.css"));
+        ?>
+
+    </head>
+    <body>
+        <div id="global">
+            <!-- Header -->
+            <div id="header">
+                <div id="logo"><h1><a href="#">CRM - Sitema de Gestão de Relacionamento com o Cliente</a></h1></div>
+
+                <!-- Menu -->
+                <div id="menu">
+                </div>
+            </div>
+                <!-- Menu -->
+            <!-- end Header -->
+
+            <!-- Content -->
+            <div id="content">
+                <?php echo $this->layout()->content; ?>
+            </div>
+            <!--  end Content -->
+
+            <!-- Footer -->
+            <div id="footer">
+
+            </div>
+            <!-- end Footer -->
+        </div>
+    </body>
+</html>

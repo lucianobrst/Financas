@@ -1,0 +1,89 @@
+<?php echo $this->doctype(); ?>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <?php echo $this->headMeta(); ?>
+        <?php echo $this->headTitle(); ?>
+
+        <?php echo $this->headLink() ->prependStylesheet($this->baseUrl('/styles/desktop.css')); ?>
+        <?php echo $this->headScript()	->appendFile($this->baseUrl(). '/js/jquery-1.6.min.js') 
+        								->appendFile($this->baseUrl(). '/js/functions.js')
+        								->appendFile($this->baseUrl(). '/js/carousel.js'); ?>
+        
+        </head>
+    <body>
+<div id="topo">
+	<div class="head">
+		<h1>Nome da Empresa</h1>
+	</div>
+</div>
+<!--Menu -->
+<div class="abs" id="bar_top">
+<ul style="width:900px; margin:0 auto;">
+      <li><a class="menu_trigger" href="#">Cadastros</a>
+        <ul style="display: none;" class="menu">
+          <li><a href="<?php echo $this->url(array('controller' => 'CadastroEmpresa', 'action' => 'index', 'module' => 'financas'), null, 1); ?>">Empresas</a></li>
+          <li><a href="#">Usuários</a></li>
+          <li><a href="#">Entidades</a></li>
+          <li><a href="#">Caixas</a></li> 
+          <li><a href="#">Contas correntes</a></li>
+          <li><a href="#">Bancos</a></li>
+          <li><a href="#">Tipos de documentos</a></li>
+          <li><a href="#">Portadores</a></li>
+          <li><a href="#">Boletos</a></li>
+          <li><a href="#">Forma de pagamentos</a></li>
+          <li><a href="#">Administradora de cartão</a></li>
+          <li><a href="#">Cidades</a></li>
+        </ul>
+      </li>
+      
+      <li><a class="menu_trigger" href="#">Lançamentos</a>
+        <ul style="display: none;" class="menu">
+          <li><a href="contas.html">Movimentação caixa</a></li>
+          <li><a href="#">Movimentação conta corrente</a></li>
+          <li><a href="#">Contas a receber</a></li>
+          <li><a href="#">Contas a pagar</a></li>
+          <li><a href="#">Tele cobrança</a></li>
+          <li><a href="#">Cheques recebidos</a></li>
+        </ul>
+      </li>
+      
+      <li><a class="menu_trigger" href="#">Relatórios</a>
+        <ul style="display: none;" class="menu">
+          <li><a href="#">Contas a pagar</a></li>
+          <li><a href="#">Contas a receber</a></li>
+          <li><a href="#">Movimentação caixa</a></li>
+          <li><a href="#">Movimentação conta corrente</a></li>
+          <li><a href="#">Pagamentos</a></li>
+          <li><a href="#">Recebimentos</a></li>
+          <li><a href="#">Cheques recebidos</a></li>
+          <li><a href="#">Plano de contas</a></li>
+          <li><a href="#">Previsão de caixa</a></li>
+          <li><a href="#">Gráficos</a></li>
+          <li><a href="#">Entidades</a></li>
+          <li><a href="#">DRE</a></li>
+        </ul>
+      </li>
+      
+      <li><a class="menu_trigger" href="#">Configuração</a>
+        <ul style="display: none;" class="menu">
+          <li><a href="#">Gerenciamento de usuários</a></li>
+          <li><a href="#">Empresas</a></li>
+          <li><a href="#">Parâmetros</a></li>
+          <li><a href="#">Tabelas</a></li>
+          <li><a href="#">Entidades</a></li>
+          <li><a href="#">Configurações</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+            <!-- Content -->
+            <div id="conteiner">
+                <?php echo $this->layout()->content; ?>
+            </div>
+            <!--  end Content -->
+
+        </div>
+    </body>
+</html>

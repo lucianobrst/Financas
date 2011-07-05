@@ -1,0 +1,47 @@
+<?php echo $this->doctype(); ?>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <?php echo $this->headMeta(); ?>
+        <?php echo $this->headTitle(); ?>
+
+        <?php
+        echo $this->headLink()
+                ->prependStylesheet($this->baseUrl('/styles/style.css'))
+                ->prependStylesheet($this->baseUrl('/styles/menu.css'));
+        ?>
+
+    </head>
+    <body>
+		<div id="topo">
+			<div class="head-center">
+			<form method="post" action="https://www.schoolofnet.com/portal/customer/auth">
+					<h2 style="margin-top: 0px; margin-bottom: 0px;">Login</h2>
+					<label>Email: &nbsp;<input type="text" id="email" value="" name="email"></label><br>
+					<label>Senha: <input type="password" id="password" value="" name="password"></label>					
+					<input type="submit" id="login_btn" value="Login" name="submit"><br /><br />
+					<a href="https://www.schoolofnet.com/portal/lost">Esqueci minha senha</a>
+			</form>
+			<h1>Brasil sistemas</h1>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Serviços</a></li>
+					<li><a href="#">Produtos</a></li>
+					<li><a href="#">Contato</a></li>
+				</ul>	
+			</div>
+		</div>
+
+            
+            <div id="content"><!-- Content -->
+                <?php echo $this->layout()->content; ?>
+            </div><!--  end Content -->
+            
+
+            
+            <div id="footer"><!-- Footer -->
+				Rodapé
+            </div><!-- end Footer -->
+
+    </body>
+</html>
